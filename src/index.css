@@ -1,13 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f1f5f8;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  align-items: center;
+}
+nav .heading {
+  width: 45%;
+  text-align: center;
+}
+nav .heading h1 {
+  letter-spacing: 0.25rem;
+  font-size: 2rem;
+}
+nav form {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (max-width: 1399px) {
+  nav .heading {
+    width: 35%;
+  }
+  nav form {
+    width: 55%;
+  }
+}
+@media (max-width: 1199px) {
+  nav .heading {
+    width: 35%;
+  }
+  nav form {
+    width: 65%;
+  }
+}
+@media (max-width: 991px) {
+  nav {
+    flex-wrap: wrap;
+    height: 110px;
+  }
+  nav .heading {
+    width: 100%;
+  }
+  nav form {
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  .content {
+    min-height: calc(100vh - 110px);
+  }
+}
+@media (max-width: 767px) {
+  nav form {
+    flex-wrap: wrap;
+  }
+  nav {
+    height: 150px;
+  }
+  nav .submit {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .content {
+    min-height: calc(100vh - 150px);
+  }
+}
+@media (max-width: 569px) {
+  nav form .color-all {
+    margin-top: 25px;
+  }
+  nav {
+    height: 200px;
+  }
+  .content {
+    min-height: calc(100vh - 200px);
+  }
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
+  min-height: calc(100vh - 100px);
+}
+.content .box {
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+.content .box p{
+  margin: 0;
+  
 }
