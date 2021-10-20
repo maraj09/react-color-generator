@@ -18,5 +18,5 @@ You will also see any lint errors in the console.
 
 
 ## Demo Link
-https://maraj-color-generator.netlify.app/
+https://maraj-react-master-project.netlify.app/
 
